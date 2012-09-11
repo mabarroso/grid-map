@@ -7,16 +7,16 @@ require "grid-map/version"
 Gem::Specification.new do |s|
   s.name        = "grid-map"
   s.version     = GridMap::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of GridMap."
-  s.description = "TODO: Description of GridMap."
+  s.authors     = ["Miguel Adolfo Barroso"]
+  s.email       = ["mabarroso"]
+  s.homepage    = "https://github.com/mabarroso/grid-map"
+  s.summary     = "Summary of GridMap."
+  s.description = "Description of GridMap."
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
-  s.test_files = Dir["test/**/*"]
+  s.files = Dir["{app,config,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.test_files = Dir["spec/**/*"]
 
-  s.add_dependency "rails", "~> 3.2.8"
 
-  s.add_development_dependency "sqlite3"
+
+  s.add_development_dependency "rspec", "~> 2.7.0"
 end
