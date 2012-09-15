@@ -16,10 +16,10 @@ module GridMap
 	end
 
 	def self.square radius, lat, lon, array = false
-		r = radius*2/3
-		x = (distance(lat, lon, 90, 0)/r).ceil
-		y = (distance(lat, lon, 0, 180)/r).ceil
-		[x, y] if array
+		r = radius/3
+		x = (distance(0, 0, lat, 0)/r).ceil
+		y = (distance(0, 0, 0, lon)/r).ceil
+		return [x, y] if array
 		{x: x, y: y}
 	end
 end

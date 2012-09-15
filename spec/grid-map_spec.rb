@@ -45,70 +45,60 @@ describe GridMap do
 	end
 
 	describe "square" do
-	  it "should be [500938, 1001876]" do
-	  	GridMap::square(30, 0, 0)[:x].should == 500938
-	  	GridMap::square(30, 0, 0)[:y].should == 1001876
+	  it "should match" do
+	  	GridMap::square(30, 0, 0, true).should == [0, 0]
 	  end
 
-	  it "should be [0, 500938]" do
-	  	GridMap::square(30, 90, 0)[:x].should == 0
-	  	GridMap::square(30, 90, 0)[:y].should == 500938
+	  it "should match" do
+	  	GridMap::square(30, 90, 0, true).should == [1001876, 0]
 	  end
 
-	  it "should be [500938, 0]" do
-	  	GridMap::square(30, 0, 180)[:x].should == 500938
-	  	GridMap::square(30, 0, 180)[:y].should == 0
+	  it "should match" do
+	  	GridMap::square(30, 0, 180, true).should == [0, 2003751]
 	  end
 
-	  it "should be [0, 500938]" do
-	  	GridMap::square(30, 90, 180)[:x].should == 0
-	  	GridMap::square(30, 90, 180)[:y].should == 500938
+	  it "should match" do
+	  	GridMap::square(30, 90, 180, true).should == [1001876, 2003751]
 	  end
 
-	  it "should be [300563, 601126]" do
-	  	GridMap::square(50, 0, 0)[:x].should == 300563
-	  	GridMap::square(50, 0, 0)[:y].should == 601126
+	  it "should match" do
+	  	GridMap::square(50, 90, 180, true).should == [601126, 1202251]
 	  end
 
-	  it "should be [150282, 300563]" do
-	  	GridMap::square(100, 0, 0)[:x].should == 150282
-	  	GridMap::square(100, 0, 0)[:y].should == 300563
+	  it "should match" do
+	  	GridMap::square(100, 90, 180, true).should == [300563, 601126]
 	  end
 
-	  it "should be [75141, 150282]" do
-	  	GridMap::square(200, 0, 0)[:x].should == 75141
-	  	GridMap::square(200, 0, 0)[:y].should == 150282
+	  it "should match" do
+	  	GridMap::square(200, 90, 180, true).should == [150282, 300563]
 	  end
 
-	  it "should be [50094, 100188]" do
-	  	GridMap::square(300, 0, 0)[:x].should == 50094
-	  	GridMap::square(300, 0, 0)[:y].should == 100188
+	  it "should match" do
+	  	GridMap::square(300, 90, 180, true).should == [100188, 200376]
 	  end
 
-	  it "should be [30057, 60113]" do
-	  	GridMap::square(500, 0, 0)[:x].should == 30057
-	  	GridMap::square(500, 0, 0)[:y].should == 60113
+	  it "should match" do
+	  	GridMap::square(500, 90, 180, true).should == [60113, 120226]
 	  end
 
-	  it "should be [15029, 30057]" do
-	  	GridMap::square(1000, 0, 0)[:x].should == 15029
-	  	GridMap::square(1000, 0, 0)[:y].should == 30057
+	  it "should match" do
+	  	GridMap::square(1000, 90, 180, true).should == [30057, 60113]
 	  end
 
-	  it "should be [7515, 15029]" do
-	  	GridMap::square(2000, 0, 0)[:x].should == 7515
-	  	GridMap::square(2000, 0, 0)[:y].should == 15029
+	  it "should match" do
+	  	GridMap::square(2000, 90, 180, true).should == [15029, 30057]
 	  end
 
-	  it "should be [5010, 10019]" do
-	  	GridMap::square(3000, 0, 0)[:x].should == 5010
-	  	GridMap::square(3000, 0, 0)[:y].should == 10019
+	  it "should match" do
+	  	GridMap::square(3000, 90, 180, true).should == [10019, 20038]
 	  end
 
-	  it "should be [3006, 6012]" do
-	  	GridMap::square(5000, 0, 0)[:x].should == 3006
-	  	GridMap::square(5000, 0, 0)[:y].should == 6012
+	  it "should match" do
+	  	GridMap::square(5000, 90, 180, true).should == [6012, 12023]
 	  end
 
+	  it "should match" do
+	  	GridMap::square(100, 40.4245895, -3.6494852, true).should == [135002, 12188]
+	  end
 	end
 end
